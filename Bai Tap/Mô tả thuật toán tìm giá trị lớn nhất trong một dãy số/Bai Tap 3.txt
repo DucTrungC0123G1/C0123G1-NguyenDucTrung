@@ -1,0 +1,14 @@
+BEGIN
+	INPUT N
+	INPUT a1,a2,a3...ai
+	i<N
+	Max = ai
+	i=2
+	While i > N
+	 Display "gia tri lon nhat la Max"
+	Do If ai > Max
+		ai = Max
+	   Else i = i+1
+	   END If
+	END Do
+END	
