@@ -8,6 +8,6 @@ BEGIN
 			C = Max
 		END IF
 	END IF
-Display Max
+Display Max "la gia tri lon nhat"
 END
 	  
