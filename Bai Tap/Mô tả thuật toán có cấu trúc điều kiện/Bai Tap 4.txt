@@ -1,0 +1,21 @@
+BEGIN
+	Input Diem
+		Diem = A
+	If A >= 75
+		Display "Loai A"
+	Else 
+	 IF 60<=A<75
+		Display "Loai B"
+	   Else
+	    IF 45<=A<60
+		Display "Loai C"
+	    Else
+	     IF 35<=A<45
+		Display "Loai D"
+	     Else
+		Display "Loai E"
+             End IF
+	    End IF
+	  End IF
+	 End IF
+END	
