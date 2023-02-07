@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao Form Lay Survey Khach Hang</title>
+
+</head>
+<body>
+<font size="5">Market Research Survey</font>
+<p>Please take a few moments to complete this satisfaction survey.</p>
+<hr/>
+<form action="" method="post" style="width: 100%">
+    <label for="Age" style="font-size: medium"><b>What is your age range?</b></label><br/>
+    <select id="Age" name="Age">
+        <option value="Age">18-24</option>
+        <option value="Age">25-34</option>
+        <option value="Age">35-50</option>
+        <option value="Age">50+</option>
+    </select><br/>
+
+    <label for="Yincom" style="font-size: medium"><b>What is your yearly income range?</b></label><br/>
+    <select id="Yincom" name="Yincom">
+        <option value="Yincom">$0-$25,000</option>
+        <option value="Yincom">$25,001-$50,000</option>
+        <option value="Yincom">50,001-$100,000</option>
+        <option value="Yincom">+$100,000</option>
+    </select><br/>
+
+    <b>Gender Identity</b><br/>
+    <label for="Male"></label>
+    <input type="radio" id="Male" name="gender" value="Male">Male<br/>
+    <label for="Female"></label>
+    <input type="radio" id="Female" name="gender" value="Female">Female<br/>
+    <label for="Nonbinary"></label>
+    <input type="radio" id="Nonbinary" name="gender" value="Nonbinary">Nonbinara<br/>
+    <label for="Other"></label>
+    <input type="radio" id="Other" name="gender" value="Other">Other<br/>
+    <input type="text" max="255"><br/>
+    <b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b><br/>
+    <label for="Product1"></label>
+    <input type="checkbox" id="Product1" name="product">Product1<br/>
+    <label for="product2"></label>
+    <input type="checkbox" id="product2" name="product">Product2<br/>
+    <label for="product3"></label>
+    <input type="checkbox" id="product3" name="product">Product3<br/>
+    <b>How often would you use our new product?</b><br/>
+    <label for="nproduct1"></label>
+    <input type="radio" id="nproduct1" name="time" value="Daily">Daily<br/>
+    <label for="nproduct2"></label>
+    <input id="nproduct2" type="radio" name="time" value="Weekly">Weekly<br/>
+    <label for="nproduct3"></label>
+    <input type="radio" id="nproduct3"name="time"value="Monthly">Monthly<br/>
+    <b>What would you pay for the new product?</b><br/>
+    $<input type="text"id="pay"name="Dollars"size="15">.<input type="text"id="pay"name="Cents"size="3">
+    <pre>      Dollars              Cents</pre><br/>
+    <b>What features would you like to see new in the product</b><br/>
+    <input  type="text" id="features" name="features" style="width: 100%;height: 200px">
+    <p>Please rate your level of agreement with the following statements</p><br/>
+    <table border="1" style="width: 100%">
+    <tr>
+        <th></th>
+        <th>Strongly Disagree</th>
+        <th>Disagree</th>
+        <th>Agree</th>
+        <th>Strongly Agree</th>
+    </tr>
+    <tr>
+        <td>Our products are price fairly</td>
+        <th><input type="radio"name="price" value="price1"><br/>1</th>
+        <th><input type="radio"name="price"value="price2"><br/>2</th>
+        <th><input type="radio"name="price"value="price3"><br/>3</th>
+        <th><input type="radio"name="price"value="price4"><br/>4</th>
+
+    </tr>
+        <tr>
+        <td>Our products are high quality</td>
+        <th><input type="radio"name="high"value="high1"><br/>1</th>
+        <th><input type="radio"name="high"value="high2"><br/>2</th>
+        <th><input type="radio"name="high"value="high3"><br/>3</th>
+        <th><input type="radio"name="high"value="high4"><br/>4</th>
+        </tr>
+        <tr>
+        <td>You would recommend our product to a friend or coworker</td>
+            <th><input type="radio"name="friend"value="frined1"><br/>1</th>
+            <th><input type="radio"name="friend"value="friend2"><br/>2</th>
+            <th><input type="radio"name="friend"value="friend3"><br/>3</th>
+            <th><input type="radio"name="friend"value="friend4"><br/>4</th>
+        </tr><br/>
+
+    </table>
+    <input type="button"value="Submit">
+
+
+</form>
+
+</body>
+</html>
