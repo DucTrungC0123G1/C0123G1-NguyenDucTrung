@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="dso">Doanh So Ban Hang</label>
+<input id="dso" type="number" placeholder="Doanh So" width="300px"> VND
+<button onclick="commission()">Kiem tra</button>
+<p id="result">Ket qua</p>
+</body>
+</html>
+<script>
+    function commission() {
+        let dso =+document.getElementById("dso").value;
+        let result="";
+        let sales = dso*10/100;
+        document.getElementById("result").innerHTML="Tien Hoa Hong = "+" "+ sales+" "+ "VND";
+
+    }
+</script>
