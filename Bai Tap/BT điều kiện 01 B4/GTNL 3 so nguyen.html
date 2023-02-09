@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Gia Tri Lon Nhat Cua 3 So Nguyen</h1>
+<label for="numb">Nhap so nguyen 1</label>
+<input id="numb" type="number" placeholder="Nhap vao so nguyen" width="300px"><br/>
+<br>
+<label for="numb2">Nhap so nguyen 2</label>
+<input id="numb2" type="number"placeholder="Nhap vao so nguyen" width="300px"><br/>
+<br>
+<label for="numb3">Nhap so nguyen 3</label>
+<input id="numb3" type="number"placeholder="Nhap vao so nguyen" width="300px"><br/>
+<br>
+<button onclick="kiemtraGtln()">Kiem Tra</button>
+<p id="result">Ket Qua</p>
+</body>
+</html>
+<script>
+    function kiemtraGtln() {
+        let numb=+document.getElementById("numb").value;
+        let numb2=+document.getElementById("numb2").value;
+        let numb3=+document.getElementById("numb3").value;
+        let result="";
+        if (numb>=numb2&&numb>=numb3)
+            result=+numb;
+        else if (numb2>=numb&&numb2>=numb3)
+            result=+numb2;
+        else
+            result=+numb3;
+        document.getElementById("result").innerHTML="so lon nhat la"+" "+ result
+
+
+    }
+</script>
