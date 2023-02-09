@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Xep Hang Hoc Luc Hoc Sinh</h1>
+<label for="ktra">Nhap diem kiem tra</label>
+<input id="ktra" type="number" placeholder="Nhap diem bai kiem tra" min="0" max="10" width="200px"><br/>
+<br>
+<label for="giuaki">Nhap diem giua ki</label>
+<input id="giuaki" type="number" placeholder="Nhap diem bai giua ky" min="0" max="10" width="200px"><br/>
+<br>
+<label for="cuoiki">Nhap diem cuoi ki</label>
+<input id="cuoiki" type="number" placeholder="Nhap diem cuoi ky" width="200px" min="0" max="10"><br/>
+<br>
+<button onclick="kiemtrahl()">Kiem tra</button>
+<p id="result">Ket qua</p>
+</body>
+</html>
+<script>
+    function kiemtrahl() {
+        let ktra=+document.getElementById("ktra").value;
+        let giuaki=+document.getElementById("giuaki").value;
+        let cuoiki=+document.getElementById("cuoiki").value;
+        let dtb= (ktra+(giuaki*2)+(cuoiki*3))/6;
+        let result="";
+        if (dtb<5)
+            document.getElementById("result").innerHTML="Hoc luc yeu" + dtb;
+        else if (dtb<6.5)
+            document.getElementById("result").innerHTML="Hoc luc trung binh"+ dtb;
+        else if (dtb<8)
+            document.getElementById("result").innerHTML="Hoc luc kha"+ dtb;
+        else
+            document.getElementById("result").innerHTML="Hoc luc gioi"+ dtb;
+
+        
+
+    }
+</script>
