@@ -7,24 +7,41 @@
 <body>
 <input type="number" id="num1" >
 <input type="number" id="num2" >
-<button onmouseout = "Add()">Cong</button>
-<button onclick="Sub()">Tru</button>
+<button onclick= "Cong()">Cong</button>
+<button onclick="Tru()">Tru</button>
+<button onclick="Nhan()">Nhan</button>
+<button onclick="Chia()">Chia</button>
 <h3>Ket Qua:</h3>
 <p id="result"></p>
 </body>
 </html>
 <script>
-    function Add() {
+    function Cong() {
         let number1 = document.getElementById("num1").value;
         let number2 = document.getElementById("num2").value;
         let result = Number(number1) + Number(number2);
         document.getElementById("result").innerHTML = result;
     }
 
-    function Sub() {
+    function Tru() {
         let number1 = document.getElementById("num1").value;
         let number2 = document.getElementById("num2").value;
         let result = number1 - number2;
         document.getElementById("result").innerHTML = result;
+    }
+
+    function Nhan() {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result = number1 * number2;
+        document.getElementById("result").innerHTML = result;
+
+    }
+    function Chia() {
+        let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+        let result = number1 / number2;
+        document.getElementById("result").innerHTML = result;
+
     }
 </script>
