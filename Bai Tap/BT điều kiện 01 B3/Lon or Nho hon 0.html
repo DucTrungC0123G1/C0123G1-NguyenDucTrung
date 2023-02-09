@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiem Tra So Nho Hoac Lon Hon 0</h1>
+<label for="numb">Nhap Vao Mot So</label>
+<input id="numb" type="number" placeholder="Nhap Vao Mot So Nguyen" ><br/>
+<br>
+<button onclick="kiemtraso()">Kiem Tra</button>
+<p id="result"> Ket Qua </p>
+</body>
+</html>
+<script>
+    function kiemtraso() {
+        let numb= +document.getElementById("numb").value;
+        let result=""
+        if (numb<0)
+            result=" < 0";
+        else if (numb===0)
+            result =" = 0";
+        else
+            result =">0";
+
+        document.getElementById("result").innerHTML="So Nhap"+" "+numb+" "+ result;
+
+    }
+</script>
