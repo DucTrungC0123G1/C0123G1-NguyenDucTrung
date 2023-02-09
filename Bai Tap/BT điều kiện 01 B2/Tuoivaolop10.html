@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="age">Nhap Vao So Tuoi</label>
+<input id="age" type="number"><br/>
+<br>
+<br>
+<button onclick="kiemtratuoi()">Kiem Tra</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function kiemtratuoi() {
+        let age = +document.getElementById("age").value;
+        let result=""
+        if (age<16)
+            result="Ban Khong Du Tuoi Vao Lop 10";
+        else
+            result ="Ban Du Tuoi Vao Lop 10";
+        document.getElementById("result").innerHTML=result;
+
+    }
+</script>
