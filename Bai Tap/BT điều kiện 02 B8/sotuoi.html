@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="age" type="number" placeholder=" Nhap Vao So Tuoi">
+<button onclick="ktage()">Kiem Tra</button>
+<p id="result"> Ket Qua</p>
+</body>
+</html>
+<script>
+    function ktage() {
+        let age =+document.getElementById("age").value;
+        Number.isInteger(age);
+        let result="";
+        if (age <1){
+            document.getElementById("result").innerHTML="Nhap sai";}
+            else if (age>120){
+                document.getElementById("result").innerHTML="Nhap sai";
+            }
+
+        else {
+            document.getElementById("result").innerHTML="So Tuoi Cua Ban La ="+age;
+        }
+
+    }
+</script>
