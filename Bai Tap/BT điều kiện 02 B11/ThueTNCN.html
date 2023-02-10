@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="salary"  type="number" placeholder="Nhap Tien Luong">
+<button onclick="thue()">Kiem tra</button>
+<p id="result">Ket Qua</p>
+</body>
+</html>
+<script>
+    function thue() {
+        let salary=+document.getElementById("salary").value;
+        let bac1=salary*0.05;
+        let bac2=salary*0.1;
+        if (salary < 10000000){
+            document.getElementById("result").innerHTML="Thue ca nhan la ="+" "+bac1;
+
+        }
+        else {
+            document.getElementById("result").innerHTML="Thue ca nhan la = "+" "+bac2;
+        }
+
+    }
+</script>
