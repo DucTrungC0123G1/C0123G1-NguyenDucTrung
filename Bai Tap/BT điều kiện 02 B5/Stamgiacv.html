@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tinh Dien Tich Tam Giac Vuong</h1>
+<label for="canha" >Nhap canh A</label>
+<input id="canha" type="number" placeholder="Nhap Canh A"><br/>
+<br>
+<label for="canhb">Nhap Canh B</label>
+<input id="canhb" type="number" placeholder="Nhap Canh B"><br/>
+<button onclick="stgv()">Dien tich</button>
+<p id="result">Dien Tich Tam Giac</p>
+
+</body>
+</html>
+<script>
+    function stgv() {
+        let canha=+document.getElementById("canha").value;
+        let canhb=+document.getElementById("canhb").value;
+        let stgv=(canha*canhb)/2;
+        let result="";
+        if (canha<0){
+            document.getElementById("result").innerHTML="Nhap Sai Kich Thuoc";
+        }
+        else if (canhb<0){
+            document.getElementById("result").innerHTML="Nhap Sai Kich Thuoc";
+        }
+        else {
+            document.getElementById("result").innerHTML="Dien Tich La ="+" "+stgv;
+        }
+
+
+    }
+</script>
