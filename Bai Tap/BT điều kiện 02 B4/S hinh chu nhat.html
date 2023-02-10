@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<label for="canha">Nhap chieu dai</label>
+<input id="canha" type="number" placeholder="Chieu dai"><br/>
+<br>
+<label for="canhb">Nhap chieu rong</label>
+<input id="canhb" type="number" placeholder="Chieu rong"><br/>
+<button onclick="shcn()"> Dien Tich</button>
+<p id="result">Dien Tich Hinh Chu Nhat </p>
+</body>
+</html>
+<script>
+    function shcn() {
+        let canha=+document.getElementById("canha").value;
+        let canhb=+document.getElementById("canhb").value;
+        let dtich=canha*canhb;
+        let result="";
+        if (canha<0)
+
+        document.getElementById("result").innerHTML="Nhap Sai Kich Thuoc";
+        else if (canhb<0)
+            document.getElementById("result").innerHTML="Nhap Sai Kich Thuoc";
+        else
+            document.getElementById("result").innerHTML="Dien Tich Hinh Chu Nhat La ="+" "+dtich;
+
+    }
+</script>
