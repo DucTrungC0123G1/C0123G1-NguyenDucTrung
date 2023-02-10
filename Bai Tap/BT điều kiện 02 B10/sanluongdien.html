@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="kwh" type="number"><br/>
+<br>
+<button onclick="tinhgia()">Kiem tra</button>
+<p id="result">Ket Qua</p>
+
+</body>
+</html>
+<script>
+    function tinhgia() {
+        let kwh = +document.getElementById("kwh").value;
+        let bac1=kwh*1000;
+        let bac2=50000+((kwh-50)*2000);
+        let bac3=50000+100000+((kwh-100)*3000);
+        if (kwh<=50){
+            document.getElementById("result").innerHTML="Tien Dien =" +" "+bac1;
+        }else if (50<kwh<=100){
+            document.getElementById("result").innerHTML="Tien Dien="+" "+ bac2;
+
+        }
+        else{
+            document.getElementById("result").innerHTML="Tien Dien="+" "+ bac3;
+        }
+
+    }
+</script>
