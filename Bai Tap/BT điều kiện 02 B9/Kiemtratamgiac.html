@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="canha">Nhap Canh A</label>
+<input id="canha" type="number" placeholder="Nhap Canh A"><br/>
+<br>
+<label for="canhb">Nhap Canh B</label>
+<input id="canhb" type="number" placeholder="Nhap Canh B"><br/>
+<br>
+<label for="canhc">Nhap Canh C</label>
+<input id="canhc" type="number" placeholder="Nhap Canh C"><br/>
+<br>
+<button onclick="kiemtratg()">Kiem tra</button>
+<p id="result"> Ket Qua</p>
+</body>
+</html>
+<script>
+    function kiemtratg() {
+        let canha=+document.getElementById("canha").value;
+        let canhb=+document.getElementById("canhb").value;
+        let canhc=+document.getElementById("canhc").value;
+        if ((canha<=0) || (canhb<=0) || (canhc<=0)) {
+            document.getElementById("result").innerHTML = "Nhap sai";
+        }else if (canha + canhb > canhc){
+            if (canhb + canhc > canha){
+                if (canha + canhc > canhb){
+                    document.getElementById("result").innerHTML="La mot tam giac";
+                }
+            }
+        }
+        else {
+            document.getElementById("result").innerHTML="Khong pahi tam giac";
+        }
+
+    }
+</script>
