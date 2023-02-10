@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Phuong Trinh Bac 1</h1>
+<input id="soa" type="number" placeholder="Nhap So a"><br/>
+<br>
+<input id="sob" type="number" placeholder="Nhap So b"><br/>
+<br>
+<button onclick="ptb1()">Kiem Tra</button>
+<p id="result"> Ket Qua</p>
+
+</body>
+</html>
+<script>
+    function ptb1() {
+        let soa=+document.getElementById("soa").value;
+        let sob=+document.getElementById("sob").value;
+        let result = -sob/soa;
+        document.getElementById("result").innerHTML="Nghiem Cua Phuong Trinh La ="+" "+result;
+
+
+    }
+</script>
