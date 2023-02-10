@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input  id="money" type="number" placeholder="So Tien">VND<br/>
+<br>
+<input id="year" type="number" placeholder="Thoi Gian">Nam<br/>
+<br>
+<input id="rate" type="number" placeholder="Lai Suat">%<br/>
+<br>
+<button onclick="inter()">Kiem Tra</button>
+<p id="result">Ket Qua</p>
+</body>
+</html>
+<script>
+    function inter() {
+        let money=+document.getElementById("money").value;
+        let year=+document.getElementById("year").value;
+        let rate=+document.getElementById("rate").value;
+        let rate2=rate/100
+        let lsuat= money*Math.pow((1+rate2),year);
+        let result=lsuat;
+        document.getElementById("result").innerHTML="Lai sau"+" "+ year +" "+"nam la"+" "+ result;
+
+    }
+</script>
