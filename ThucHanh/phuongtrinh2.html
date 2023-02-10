@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Phuong Trinh Bac 2</h1>
+<input id="a" type="number" placeholder="nhap a">
+<input id="b" type="number" placeholder="nhap b">
+<input id="c" type="number" placeholder="nhap c">
+<button onclick="ptb2()">kiem tra</button>
+<p id="result"> ket qua</p>
+
+
+</body>
+</html>
+<script>
+    function ptb2() {
+        let a = +document.getElementById("a").value;
+        let b=+document.getElementById("b").value;
+        let c=+document.getElementById("c").value;
+        let powb= Math.pow(b,2)
+        let d=powb-(4*a*c);
+        let x = -b/(2*a);
+        let sqrt = Math.sqrt(d);
+        let x1 = (-b+sqrt)/(2*a);
+        let x2 = (-b-sqrt)/(2*a);
+        let result="";
+        if (d<0){
+            document.getElementById("result").innerHTML="Phuong Trinh Vo Nghiem";
+        }
+        else if (d===0){
+            document.getElementById("result").innerHTML="Phuong Trinh Co Nghiem Kep = "+" "+x;
+        }
+        else{
+            document.getElementById("result").innerHTML="Phuong Trinh Nghiem 1 = "+" "+x1 +"Phuong Trinh Nghiem 2="+" "+x2;
+        }
+
+    }
+</script>
