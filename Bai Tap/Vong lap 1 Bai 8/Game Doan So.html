@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="choi()" value="Bat Dau">
+
+<script>
+    function choi() {
+        let khoangSo = +prompt("Nhap Khoang So Can Doan");
+        let soNhap = +prompt("So Ban Doan");
+        let soNgauNhien = Math.floor(Math.random()*khoangSo)
+        let count = 0
+        while (soNhap != soNgauNhien){
+            count++;
+            if (count === 4){
+                alert("ban het so lan doan")
+                break;
+            }else if (soNhap < soNgauNhien){
+                alert("So ban nhap be hon")
+            }else {
+                alert("so ban doan lon hon")
+            }
+            soNhap = +prompt("So Ban Doan");
+        }
+        if (count===4){
+            alert("ban het so lan doan")
+        }else {
+            alert("Ban doan dung ")
+        }
+
+    }
+
+</script>
+</body>
+</html>
