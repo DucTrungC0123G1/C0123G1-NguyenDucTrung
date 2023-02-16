@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myColor = ["Red", "Green","White","Black"];
+    document.write(myColor.join(", "))
+    document.write("<br>")
+
+    let daySo= prompt("Nhap Vao Day So");
+    let mang = [daySo[0]];
+    document.write("Day so ="+daySo +"<br>")
+    for(let i=1; i<daySo.length;i++){
+        if(daySo[i-1] % 2 === 0 && daySo[i] %2 === 0){
+            mang.push("-"+ daySo[i])
+        }else{
+            mang.push(daySo[i])
+        }
+    }
+    document.write(mang.join(""))
+    document.write("<br>")
+
+    let dayChuoi = prompt("Nhap Vao Chuoi");
+    let mang2 = [];
+    let vietHoa = 'ABCDEFGHIJKLMNOPQRSTUVWYZ';
+    let vietThuong = 'abcdefghijklmnopqrstuvwyz';
+    document.write("Day chuoi can doi la :" + dayChuoi+"<br>");
+    for (let j=0; j<dayChuoi.length; j++){
+        if (vietHoa.indexOf(dayChuoi[j]) !==-1){
+            mang2.push(dayChuoi[j].toLowerCase());
+        }else if (vietThuong.indexOf(dayChuoi[j]) !==-1){
+            mang2.push(dayChuoi[j].toUpperCase());
+        }else {
+            mang2.push(dayChuoi[j]);
+        }
+
+    }
+    document.write(mang2.join(""));
+
+
+
+
+
+</script>
+
+</body>
+</html>
