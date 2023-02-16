@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang=prompt("nhap vao mang ki tu co so");
+    let dem=0;
+    document.write("mang la: "+mang+"<br>")
+    for (let i =0; i<mang.length;i++){
+        if (mang[i]%2 === 0 || mang[i]%2 === 1){
+            dem++;
+        }
+    }document.write("Ky tu so trong mang la:"+dem)
+</script>
+</body>
+</html>
