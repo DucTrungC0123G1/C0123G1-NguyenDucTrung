@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangSo = [1,5,6,77,66,88,55,22,44,9];
+    let max = 0;
+    let viTri = 0;
+    let tb =0;
+
+    document.write("mang So = "+mangSo+"<br>");
+
+    for (let i=0; i<mangSo.length; i++){
+        if(max< mangSo[i]){
+            max = mangSo[i]
+            viTri = i
+        }
+        tb +=mangSo[i]
+    }
+    tb=tb/mangSo.length
+    document.write("Phan tu lon nha trong mang la : "+ max + " tai vi tri thu "+viTri+" trong mang"+"<br>")
+    document.write("Tong Trung Binh Cua Mang La:" +tb)
+</script>
+</body>
+</html>
