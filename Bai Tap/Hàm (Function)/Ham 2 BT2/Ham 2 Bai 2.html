@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="bai2()" value="Tinh CV & DT">
+<script>
+    function chuVi(a) {
+        let circ = 2 * a * 3.14;
+        return circ;
+    }
+
+    function dienTich(a) {
+        let area = a * a * 3.14;
+        return area;
+    }
+
+    function bai2() {
+        let so = Number(prompt("Nhap vao Ban Kinh"));
+        let circ = chuVi(so);
+        let area = dienTich(so);
+        alert("chu vi la " + circ + "dien tich la " + area);
+
+    }
+</script>
+
+
+</body>
+</html>
