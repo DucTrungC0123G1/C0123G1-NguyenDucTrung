@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="bai1()" value="Tinh">
+<script>
+    function binhPhuong(so) {
+        let ketQua = so * so;
+        return ketQua;
+    }
+
+    function bai1() {
+        let so = Number(prompt("Nhap so"));
+        let ketQua = binhPhuong(so);
+        alert("Binh phuong cua " + so + " = " + ketQua);
+    }
+</script>
+</body>
+</html>
