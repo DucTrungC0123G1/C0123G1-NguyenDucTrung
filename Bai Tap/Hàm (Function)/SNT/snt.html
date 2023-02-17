@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="Nhap So">
+<input type="button" onclick="soNT()" value="Kiemtra">
+<script>
+    // function isPrime(number) {
+    //     if (number <= 1) {
+    //         return false;
+    //     } else if(number === 2 || number === 3) {
+    //         return true;
+    //     } else if (number % 2 === 0) {
+    //         return false;
+    //     } else {
+    //         for (let i = 3; i < number; i++) {
+    //             if (number % i === 0) {
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    //     return true;
+    // }
+    //
+    // function soNT() {
+    //     let so = document.getElementById("Nhap So");
+    //     let kiemtra = isPrime(so.value);
+    //     if (kiemtra) {
+    //         alert(so.value + " la so nguyen to ");
+    //     } else {
+    //         alert(so.value + " ko la so nguyen to");
+    //     }
+    // }
+    function check(number) {
+        let count=0;
+        for (let i=1;i<=number;i++){
+            if (number%i===0){
+                count++;
+            }
+        }if (count===2){
+            // return true;
+            document.write(number+"Là số nguyên tố");
+        }else{
+            // return false;
+            document.write(number+"Không là số nguyên tố");
+        }
+
+    }
+    let enterNumber=prompt("Nhập số bạn muốn kiểm tra: ");
+    check(enterNumber);
+</script>
+</body>
+</html>
