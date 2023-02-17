@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb= [2,4,5,7,8,12,23,26,45,67];
+    let nhapSo= prompt("nhap so V ");
+    let result=[];
+    for ( let i =0;i<numb.length;i++){
+        if (nhapSo == numb[i]){
+            numb.push(0);
+            continue;
+        }else {
+            result = numb[i];
+        }document.write(result+" ")
+    }
+</script>
+</body>
+</html>
