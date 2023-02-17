@@ -11,21 +11,22 @@
 <p id="result"></p>
 <script>
     function dich() {
-        let mangTA=["banana","apple","orange"];
-        let mangTV=["chuoi","tao","cam"];
-        let string= document.getElementById("string").value;
+        let mangTA = ["banana", "apple", "orange"];
+        let mangTV = ["chuoi", "tao", "cam"];
+        let string = document.getElementById("string").value;
         let ktTA = 0;
         let result = 0;
-        for ( let i = 0; i < mangTA.length; i++ ){
-            if (string === mangTA[i]){
+        for (let i = 0; i < mangTA.length; i++) {
+            if (string === mangTA[i]) {
                 ktTA = i;
-                for ( let j =0; j < mangTV.length; j++){
-                    if (ktTA === j){
+                for (let j = 0; j < mangTV.length; j++) {
+                    if (ktTA === j) {
                         result = mangTV[j]
                     }
                 }
             }
-        }document.getElementById("result").innerHTML= result;
+        }
+        document.getElementById("result").innerHTML = result;
     }
 
 </script>
