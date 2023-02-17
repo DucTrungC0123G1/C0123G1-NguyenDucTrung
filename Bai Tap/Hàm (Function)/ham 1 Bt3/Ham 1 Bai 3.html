@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="soSanh()" value="So Sanh">
+<script>
+    function tinhTong(a, b) {
+        if (a > b) {
+            return "a > b Hay Nhap Lai";
+        }else {
+            return a + b;
+        }
+
+    }
+
+    function soSanh() {
+        let a = Number(prompt("Nhap Vao a"));
+        let b = Number(prompt("Nhap Vao b"));
+        alert( tinhTong(a, b));
+    }
+</script>
+</body>
+</html>
