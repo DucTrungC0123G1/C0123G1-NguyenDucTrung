@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="bai3()" value=" Tinh Giai Thua">
+<script>
+    function giaiThua(a) {
+        let fact =1;
+        if (a>=1){
+            for (let i =1; i <=a; i++){
+                fact = fact * i;
+            }
+        }else if ( a === 0){
+            fact = 1;
+        }else {
+            return " Khong xac dinh";
+        }
+        return fact;
+
+    }
+    function bai3() {
+        let a = Number(prompt("Nhap vao so"));
+        let factorial = giaiThua(a);
+        alert(" Giai thua cua "+a+" la: "+ factorial)
+
+    }
+</script>
+</body>
+</html>
