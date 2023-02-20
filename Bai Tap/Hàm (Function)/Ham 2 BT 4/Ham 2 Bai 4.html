@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="numb()" value="Kiem Tra">
+<script>
+    function kiemTra(a) {
+        if (a % 2 == 0 || a % 2 == 1) {
+            return true;
+        }
+        return false;
+
+    }
+
+    function numb() {
+        let a = Number(prompt("Nhap Vao Chuoi"));
+        let check = kiemTra(a);
+        if (check) {
+            alert("day la so");
+        } else {
+            alert("day la chuoi");
+        }
+
+
+    }
+</script>
+</body>
+</html>
