@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="bai9()" value="Kiem Tra">
+<script>
+    function kiemTraMang(mangA, kituB) {
+        let dem = 0;
+        for (let i = 0; i < mangA.length; i++) {
+
+            if (kituB === mangA[i]) {
+                dem++;
+            }
+        }
+        if (dem === 0) {
+            dem = -1;
+        }
+        return dem;
+
+    }
+
+    function bai9() {
+        let mangA = prompt("nhap Vao mang A");
+        let kituB = prompt("nhap Vao ki Tu B");
+        document.write("so lan xuat hien cua " + kituB + " trong " + mangA + " la " + kiemTraMang(mangA, kituB));
+    }
+</script>
+</body>
+</html>
