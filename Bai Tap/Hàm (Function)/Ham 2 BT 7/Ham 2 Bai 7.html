@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="bai7()" value="Doi Cho 2 So">
+<script>
+    function doi2SoNguyen(a, b) {
+        let mang = [b, a];
+        return mang;
+
+    }
+
+    function bai7() {
+        let a = Number(prompt("Nhap Vao So A"));
+        let b = Number(prompt("Nhap Vao So B"));
+        let ketQua = doi2SoNguyen(a, b);
+        document.write("Doi Cho 2 So " + ketQua[0] + "," + ketQua[1]);
+
+    }
+
+</script>
+
+</body>
+</html>
