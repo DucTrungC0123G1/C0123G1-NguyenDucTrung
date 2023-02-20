@@ -5,9 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<input type="button" onclick="chomsao()" value="Tim Sao">
+<input type="button" onclick="findStar()" value="Tim Sao">
 <script>
-    function ngoiSao(sao) {
+    function addStar(sao) {
         let sao1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
         let sao2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
         for (let i = 0; i < sao1.length; i++) {
@@ -15,16 +15,16 @@
                 return sao2[i];
             }
         }
-        return "" ;
+        return "";
     }
 
-    function chomsao() {
-        let timsao = prompt("Nhap ten ngoi sao");
-        let sao = ngoiSao(timsao);
+    function findStar() {
+        let timSao = prompt("Nhap ten ngoi sao");
+        let sao = addStar(timSao);
         if (sao === "") {
             alert("Khong co ngoi sao");
         } else {
-            alert("Chom sao tuong ung cua  " + timsao + " la : " + sao);
+            alert("Chom sao tuong ung cua  " + timSao + " la : " + sao);
         }
     }
 </script>
