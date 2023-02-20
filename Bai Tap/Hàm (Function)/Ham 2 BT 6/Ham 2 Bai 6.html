@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="bai6()" value="Kiem Tra">
+<script>
+    function kiemTra(a) {
+        if (a>0){
+            return true;
+        }else {
+            return false;
+        }
+
+    }
+    function bai6() {
+        let a = Number(prompt("Nhap Vao So"));
+        let check =kiemTra(a);
+        if (check){
+            alert("Day La SO Nguyen");
+        }else {
+            alert("Day Khong Phai La So Nguyen");
+        }
+
+
+
+    }
+</script>
+
+</body>
+</html>
