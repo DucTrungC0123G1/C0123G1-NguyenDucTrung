@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="bai8()" value="Dao mang">
+<script>
+    function daoMang(a) {
+        return a.reverse()
+
+    }
+
+    function bai8() {
+        let a = [];
+        for (let i = 0; i < 10; i++) {
+            a[i] = Number(prompt("nhap so vao mang"))
+        }
+
+        document.write("Mang Nhap Vao La: " + a + "<br>")
+        let dao = daoMang(a);
+        document.write("Mang Sau Khi Doi La: " + dao)
+
+    }
+</script>
+</body>
+</html>
