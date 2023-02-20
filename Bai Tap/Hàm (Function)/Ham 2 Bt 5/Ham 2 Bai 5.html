@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="bai5()" value="Kiem Tra">
+<script>
+    function soNhoNhat(a) {
+        let mang;
+        for (let i = 0; i < a.length; i++) {
+            mang = a[0];
+            if (a[i] < mang) {
+                mang = a [i]
+            }
+        }
+        return mang;
+
+    }
+
+    function bai5() {
+        let a = []
+        for (let i = 1; i < 4; i++) {
+            a.push((Number(prompt("Nhap vao so thu " + i))))
+        }
+        let min = soNhoNhat(a);
+        alert("Mang So Gom" + a );
+        alert("so nho nhat la " + min);
+    }
+</script>
+
+</body>
+</html>
