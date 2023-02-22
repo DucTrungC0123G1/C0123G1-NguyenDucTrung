@@ -6,31 +6,33 @@
 </head>
 <body>
 <script>
-    let Temperature = function (C) {
-        this.doC = C
-        this.getDoC = function () {
-            return this.doC
+    class Temperature {
+        constructor(doC) {
+            while (doC < -273) {
+                doC = prompt("Nhiet do thap hon -273, xin nhap lai");
+            }
+            this.c = doC;
         }
-        if (this.doC> -273) {
-            this.changeCtoF = function () {
-                return ((this.doC*1.8) + 32)
-            }
 
-            this.changeCtoK = function () {
-                return this.doC + 273.15
-            }
-        }else {
-            return alert("Nhiet Do *C Phai Lon Hon -273*C")
+        getDoC() {
+            return this.c;
+        }
+
+        getDoK() {
+            return this.c + 273.15;
+        }
+
+        getDoF() {
+            return ((this.c * 1.8) + 32);
         }
     }
 
-    let nhietdo = Number(prompt("Nhap Nhiet Do "))
-    let temp = new Temperature(nhietdo)
-    let C = temp.getDoC()
-    let F = temp.changeCtoF()
-    let K = temp.changeCtoK()
-    alert("Nhiet Do"+C +"*C = "+F+"*F và "+K+"*K")
+    let nhietdo = Number(prompt("Nhap Nhiet Do "));
+    let temp = new Temperature(nhietdo);
+    let C = temp.getDoC();
+    let F = temp.getDoF();
+    let K = temp.getDoK();
+    alert("Nhiet Do" + C + "*C = " + F + "*F và " + K + "*K");
 </script>
-
 </body>
 </html>
