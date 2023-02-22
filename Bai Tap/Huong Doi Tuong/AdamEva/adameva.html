@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(mass) {
+            this.mass = mass;
+
+        }
+
+        getMass() {
+            return this.mass;
+        }
+
+        setMass(mass) {
+            this.mass = mass;
+        }
+
+        emptyApple() {
+            if (this.mass <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        decreaseApple() {
+            if (this.emptyApple()) {
+                alert("Da het tao")
+            } else {
+                this.mass--;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        aMale() {
+            if (this.gender === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getGender() {
+            if (this.aMale()) {
+                return "Male";
+            } else {
+                return "Famale";
+            }
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        say(string) {
+            console.log(string);
+        }
+
+        checkApple(apple) {
+            return apple.emptyApple();
+        }
+
+        eat(apple) {
+            if (apple.getMass() > 0) {
+                apple.decreaseApple();
+                this.weight++;
+            } else {
+                alert("Tao da het");
+            }
+        }
+    }
+
+    let eva = new Human("Eva", 2, 40);
+    let adam = new Human("Adam", 1, 50);
+    let changeApple = new Apple(10);
+    adam.say(" Toi la Adam" + "<br>");
+    eva.say("Toi la Eva" + "<br>");
+    while (changeApple.emptyApple() !== true) {
+        document.write("Adam an tao : " + "<br>");
+        adam.eat(changeApple);
+        document.write("so luong tao con:" + "<br>");
+        document.write(changeApple.getMass() + " Don vi" + "<br>");
+        document.write("Adam nang :" + adam.getWeight() + "<br>");
+        document.write("<hr>");
+        document.write("Eva an tao : " + "<br>");
+        eva.eat(changeApple);
+        document.write("so luong tao con:" + "<br>");
+        document.write(changeApple.getMass() + " Don vi" + "<br>");
+        document.write("Eva nang :" + eva.getWeight() + "<br>");
+    }
+
+</script>
+</body>
+</html>
