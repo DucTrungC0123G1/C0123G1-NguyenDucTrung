@@ -9,7 +9,7 @@
 <button type="button" onclick="turnOff()">OFF</button>
 <p id="result"></p>
 <script>
-    class electricLamp {
+    class ElectricLamp {
         constructor(status) {
             this.status = status;
         }
@@ -19,7 +19,7 @@
         }
     }
 
-    class switchButton {
+    class SwitchButton {
         constructor(lamp, status) {
             this.status = status;
             this.lamp = lamp;
@@ -49,8 +49,8 @@
 
     }
 
-    let electricLamp1 = new electricLamp(false);
-    let switchButton1 = new switchButton(electricLamp1, false);
+    let electricLamp1 = new ElectricLamp(false);
+    let switchButton1 = new SwitchButton(electricLamp1, false);
 
 </script>
 </body>
