@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function chuKi() {
+        let doDaiMang = +prompt("Nhap vao do dai mang");
+        let array = [];
+        for (let i = 0; i < doDaiMang; i++) {
+            let numb = parseInt(prompt("Nhap vao so"));
+            array.push(numb);
+            console.log(array)
+        }
+        for (let j = 0; j < array.length; j++) {
+            let ck = array[j] - array[j--];
+            if ((array[j++]) - (array[j]) == ck) {
+
+            }
+        }
+
+
+    }
+
+    chuKi();
+
+</script>
+
+</body>
+</html>
