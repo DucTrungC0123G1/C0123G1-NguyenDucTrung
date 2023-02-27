@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tienLuong(){
+        let salary = +prompt("Nhap vao So Luong");
+        let bac1 = salary * 0.2;
+        let bac2 = salary * 0.1;
+        let bac3 = salary * 0.05;
+        if (salary > 15000000) {
+            alert("So luong nhan duoc la :" +(salary-bac1));
+        } else if (7000000 < salary < 15000000) {
+            alert("so luong nhan duoc la: " + (salary-bac2));
+        } else {
+            alert("So luong nhac duoc la :" + (salary-bac3));
+        }
+    }
+    tienLuong();
+</script>
+</body>
+</html>
