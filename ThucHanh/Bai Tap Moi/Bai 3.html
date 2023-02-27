@@ -6,27 +6,27 @@
 </head>
 <body>
 <script>
-    function chuKi() {
-        let doDaiMang = +prompt("Nhap vao do dai mang");
-        let array = [];
-        for (let i = 0; i < doDaiMang; i++) {
-            let numb = parseInt(prompt("Nhap vao so"));
-            array.push(numb);
-            console.log(array)
-        }
-        for (let j = 0; j < array.length; j++) {
-            let ck = array[j] - array[j--];
-            if ((array[j++]) - (array[j]) == ck) {
 
+    let arr = [1, 2, 3, 4];
+
+    function check(arr) {
+        let n = arr[1] - arr[0];
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i + 1] - arr[i] === n) {
+                cout++;
             }
         }
-
-
+        if (count === arr.length - 1) {
+            document.write("true");
+            return true;
+        }
+        document.write("fale");
+        return false;
     }
-
-    chuKi();
+    check(arr);
+  
 
 </script>
-
 </body>
 </html>

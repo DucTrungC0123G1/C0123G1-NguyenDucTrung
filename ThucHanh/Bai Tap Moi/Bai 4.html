@@ -6,14 +6,30 @@
 </head>
 <body>
 <script>
-    let doDai = +prompt("Nhap Vao Do Dai");
-    let newArray = [];
-    for (let i = 0; i < doDai; i++) {
-        let numb = +prompt("nhap vao So");
-        newArray.push(numb);
-        console.log(newArray);
-    }
+    function isPalindrome(chuoi) {
+        chuoi = prompt("Nhập chuỗi")
+        let dai = chuoi.length -1
+        let check
+        for (let i=0;i<chuoi.length;i++){
+            if (chuoi[i] == chuoi[dai]) {
+                dai--
+                check = true
+                console.log(chuoi[i] +" - "+chuoi[dai])
+            }else{
+                check = false
+                break
+                console.log(chuoi[i] +" - "+chuoi[dai])
+            }
 
+        }
+        if (check == true){
+            alert(chuoi+" Đây là từ đối xứng")
+        }else{
+            alert(chuoi+" Không phải từ đối xứng")
+        }
+        return isPalindrome(chuoi)
+    }
+    isPalindrome();
 </script>
 
 </body>
