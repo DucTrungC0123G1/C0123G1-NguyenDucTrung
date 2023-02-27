@@ -6,9 +6,10 @@
 </head>
 <body>
 <script>
-    for (let i = 0; i < 5; i++) {
+    let h= +prompt("Nhap chieu cao");
+    for (let i = 0; i < h; i++) {
         for (let j = 0; j <= i; j++) {
-            if (i === 0 || j === 0 || i === 4 || j === i) {
+            if (i === 0 || j === 0 || i === h-1 || j === i) {
                 document.write("*")
             } else {
                 document.write("&nbsp&nbsp");
