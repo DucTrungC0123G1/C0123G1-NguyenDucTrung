@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arrA = [];
+    let arrB = [];
+    let max = 0;
+    let fraction = 0;
+    let sizeA = +prompt("do dai mang A");
+    let sizeB = +prompt("do dai mang B");
+    for (let i = 0; i < sizeA; i++) {
+        let numbA = parseInt(prompt("Nhap phan tu A"));
+        arrA.push(numbA);
+    }
+    for (let j = 0; j < sizeB; j++) {
+        let numB = parseInt(prompt("Nhap phan tu B"));
+        arrB.push(numB);
+    }
+    for (let k = 0; k < arrA.length; k++) {
+        if (arrA[k] / arrB[k] > max) {
+            max = arrA[k] / arrB[k];
+            fraction = k;
+
+        }
+
+    }document.write("mang A la: "+ arrA+"<br>"+"mang B la "+arrB+ "<br>"+ arrA[fraction]+"/"+arrB[fraction]+" la phan so lon nhat  "+"chi so la "+ fraction+1)
+</script>
+
 </body>
 </html>

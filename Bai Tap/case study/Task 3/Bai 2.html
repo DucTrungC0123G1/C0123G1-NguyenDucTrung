@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arrA = [];
+    let arrB= [];
+    let arrMiss = [];
+    let sizeA = +prompt("Do dai mang A");
+    let sizeB = +prompt("Do dai mang B");
+    for (let i = 0; i<sizeA; i++){
+        let numb1 = parseInt(prompt("Nhap vao mang A"));
+        arrA.push(numb1);
+    }
+    for (let j =0; j < sizeB; j++){
+        let numb2 = parseInt(prompt("Nhap vao mang B"));
+        arrB.push(numb2);
+    }
+    for (let k  =0; k<sizeB; k++){
+        if (arrA.indexOf(arrB[k])===-1){
+            arrMiss.push(arrB[k]);
+        }
+    }document.write("Phan tu khac nhau trong mang la: "+ arrMiss)
+</script>
+
 </body>
 </html>

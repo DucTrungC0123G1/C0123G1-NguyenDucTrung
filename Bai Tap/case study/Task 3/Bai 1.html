@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let doDaiMang = +prompt("Nhap vao do dai mang");
+    let arrA = [];
+    let arrB = [];
+    let sums = 0;
+    for (let i = 0; i < doDaiMang; i++) {
+        let numb = parseInt(prompt("nhap vao mang"));
+        arrA.push(numb);
+    }
+    for (let j = 0; j < arrA.length; j++) {
+        sums += arrA[j];
+        arrB[j] = sums
+    }
+    document.write("mang A la : " + arrA + "<br>" + "mang B la: " + arrB)
+</script>
 </body>
 </html>
