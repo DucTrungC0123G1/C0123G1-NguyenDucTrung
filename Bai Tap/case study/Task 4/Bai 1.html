@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function lowerName(name) {
+        name = name.trim().toLowerCase();
+        let nameArr = Array.from(name);
+        for (let i = 0; i < nameArr.length - 1; i++) {
+            if (nameArr[i] === " " && nameArr[i + 1] === " ") {
+                for (let j = i + 1; j < nameArr.length - 1; j++) {
+                    nameArr[j] = nameArr[j + 1];
+                }
+                i--;
+                nameArr.pop();
+            }
+        }
+        nameArr[0] = nameArr[0].toUpperCase();
+        for (let i = 0; i < nameArr.length - 1; i++) {
+            if (nameArr[i] === " ") {
+                nameArr[i + 1] = nameArr[i + 1].toUpperCase();
+            }
+        }
+        return nameArr.join("");
+    }
+
+    function maxLength(name) {
+        let arrName = name.split(" ");
+        let maxName = arrName[0];
+        for (let i = 1; i < arrName.length; i++) {
+            if (maxName.length < arrName[i].length) {
+                maxName = arrName[i];
+            }
+        }
+        return maxName;
+    }
+
+    let name = prompt("Nhap vao ten");
+    document.write("Ten Ban Dau la : " + name + "<br>");
+    document.write("Ten Sau khi sua la :" + lowerName(name) + "<br>");
+    document.write("Tu dai nhat la : " + maxLength(lowerName(name)));
+</script>
 </body>
 </html>
