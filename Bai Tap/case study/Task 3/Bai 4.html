@@ -5,10 +5,78 @@
     <title>Title</title>
 </head>
 <body>
+<button onclick="selectMenu(optionMenu,price)"> Menu </button> <br/>
 <script>
+    let optionMenu = ["1. Cafe", "2. Cam vat", "3. Nuoc ep ca rot",
+        "4. Nuoc ep ca chua", "5. Nuoc loc", "6. Nuoc dua"]
+    let price = [1000, 2000, 3000, 4000, 5000, 6000];
+    for (let i = 0; i < optionMenu.length; i++) {
+        document.write(optionMenu[i] + "<br>");
+    }
+    document.write((optionMenu.length + 1) + ". Thoat Menu" + "<br>");
 
+    function selectMenu(drink, prc) {
+        let drkName;
+        do {
+            drkName = +prompt("Nhap so thu tu cua mon: ");
+            let drkPrice = " ";
+            for (let i = 0; i < drink.length; i++) {
+                if (drkName === i + 1) {
+                    alert(" Mon " + drink[i] + " co gia la: " + prc[i]);
+                    let qual = +prompt("So luong: ");
+                    drkPrice = qual * prc[i];
+                    alert("Tong tien la : " + drkPrice);
+                }
+            }
+        } while (drkName !== drink.length + 1);
+        alert("Ban Thoat Menu");
+
+    }
+
+
+    // do {
+    //     slec = +prompt("Nhap stt mon")
+    //     switch (slec) {
+    //         case 1:
+    //             alert("Cafe - 1000 dong/ly");
+    //             n = +prompt("Nhap so luong");
+    //             alert("total " + n * 1000);
+    //             break;
+    //         case 2:
+    //             alert("Cam vat - 2000 dong/ly");
+    //             n = +prompt("Nhap so luong");
+    //             alert("total " + n * 2000);
+    //             break;
+    //         case 3:
+    //             alert("Nuoc ep ca rot - 3000 dong/ly");
+    //             n = +prompt("Nhap so luong");
+    //             alert("total" + n * 3000);
+    //             break;
+    //         case 4:
+    //             alert("Nuoc ep ca chua - 4000 dong/ly");
+    //             n = +prompt("Nhap so luong");
+    //             alert("total" + n * 4000);
+    //             break;
+    //         case 5:
+    //             alert("Nuoc loc - 5000 dong/ly");
+    //             n = +prompt("Nhap so luong");
+    //             alert("total" + n * 5000);
+    //             break;
+    //         case 6:
+    //             alert("Nuoc dua - 6000 dong/ly");
+    //             n = +prompt("Nhap so luong");
+    //             alert("total" + n * 6000);
+    //             break;
+    //         case 7:
+    //             alert("Ban Da Thoat Menu");
+    //             break;
+    //         default:
+    //             alert("Xin nhap lai");
+    //
+    //
+    //
+    //     }
+    // } while (slec !== 7);
 </script>
-
-
 </body>
 </html>
