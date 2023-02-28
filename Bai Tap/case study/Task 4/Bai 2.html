@@ -6,10 +6,20 @@
 </head>
 <body>
 <script>
-function diffSymb(a) {
-    let arr = [];
+    function diffSymb(a) {
+        let arr = [];
+        for (let i = 0; i < a.length; i++) {
+            if (arr.indexOf(a.charAt(i)) === -1) {
+                arr.push(a.charAt(i));
+            }
+        }
+        return arr.length;
 
-}
+    }
+
+    let a = prompt("nhap vao xau ky tu");
+    alert("co" + diffSymb(a) + "ki tu khac nhau");
+
 </script>
 </body>
 </html>
