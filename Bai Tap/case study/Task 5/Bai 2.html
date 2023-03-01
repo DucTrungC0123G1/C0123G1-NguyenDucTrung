@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrTwoWay = [];
+    // n la chieu dai arrTwoWay
+    let n = +prompt("nhap so luong mang");
+    let m;
+    // m la chieu dai cua arrTwoWay[i]
+    for (let i = 0; i < n; i++) {
+        let arrChild = [];
+        m = +prompt("nhap chieu dai mang ");
+        for (let j = 0; j < m; j++) {
+            arrChild[j] = +prompt("nhap phan tu thu " + j + " cua mang " + i);
+        }
+        arrTwoWay.push(arrChild);
+    }
+    console.log(arrTwoWay);
+
+    function listPrime(numb) {
+        let count = 0;
+        for (let k = 1; k <= numb; k++) {
+            if (numb % k === 0) {
+                count++;
+            }
+        }
+        if (count === 2) {
+            return numb;
+        }
+    }
+
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            if (listPrime(arrTwoWay[i][j])) {
+                arr.push(arrTwoWay[i][j]);
+            }
+        }
+    }
+    console.log(arr);
+    console.log(arr.length);
+
+
+</script>
+
+</body>
+</html>

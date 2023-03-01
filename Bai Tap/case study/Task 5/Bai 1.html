@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr2Way =
+    //     [
+    //         [1,2,3,4],
+    //         [5,6],
+    //         [7,8,9]
+    //     ];
+    // for (let i = 0; i < arr2Way.length; i++) {
+    //     for (let j = 0; j < arr2Way[i].length; j++) {
+    //         console.log(arr2Way[i][j]);
+    //     }
+    // }
+    let arrTwoWay = [];
+    let sum = 0;
+    // n la chieu dai arrTwoWay
+    let n = +prompt("nhap so luong mang")
+    // m la chieu dai cua arrTwoWay[i]
+    for (let i = 0; i < n; i++) {
+        let arrChild = []
+        let m = +prompt("nhap chieu dai mang ")
+        for (let j = 0; j < m; j++) {
+            arrChild[j] = +prompt("nhap phan tu thu " + j + " cua mang " + i);
+        }
+        arrTwoWay.push(arrChild);
+    }
+    console.log(arrTwoWay);
+    for (let i = 0; i < arrTwoWay.length; i++) {
+        for (let j = 0; j < arrTwoWay[i].length; j++) {
+            if (arrTwoWay[i][j] % 2 === 0) {
+                sum = sum + arrTwoWay[i][j];
+            }
+        }
+    }
+    console.log(sum);
+</script>
+</body>
+</html>
